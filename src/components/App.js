@@ -3,10 +3,20 @@ import React from "react";
 import './../styles/App.css';
 
 const App = () => {
+  const [name, setName] = useState("");
+  const showTheName= (event)=>{
+     
+      setName(event.target.value)
+  }
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
+    
+        <div>
+            <label htmlFor="input-name"> Enter Your name:</label>
+            <input  onChange={showTheName} type="text"  / >
+            <p>{name}</p>
+                       
+        </div>
+    
   )
 }
 
